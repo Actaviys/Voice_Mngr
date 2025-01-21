@@ -3,7 +3,7 @@ from vosk import Model, KaldiRecognizer
 import open_file_linc as command
 import time
 
-model = Model("Models/vosk-model-uk-v3-lgraph")
+model = Model("Models/vosk-model-small-uk-v3-small")
 rec = KaldiRecognizer(model, 16000)
 p = pyaudio.PyAudio()
 stream = p.open(format=pyaudio.paInt16, channels=1, rate= 16000, input=True, frames_per_buffer=8000)
